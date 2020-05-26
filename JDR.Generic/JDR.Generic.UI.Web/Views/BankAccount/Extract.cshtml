@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Extract";
+}
+
+<h2>Realizar extracción</h2>
+
+<label>Saldo a extraer</label>
+<input type="text" class="form-control saldo" />
+
+<br />
+<button type="button" class="btn btn-primary" onclick="extract()">Extraer</button>
+
+<h1>Cuentas</h1>
+
+<table id="tableAccounts" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Account number</th>
+        </tr>
+    </thead>
+</table>
+
+<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/sl-1.3.1/datatables.min.css" />
+
+@section Scripts{
+
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui.js")"></script>
+    <script src="~/Scripts/bank.js"></script>
+    }

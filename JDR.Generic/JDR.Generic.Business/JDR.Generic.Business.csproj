@@ -40,17 +40,22 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-  <ItemGroup>    
-    <Compile Include="Properties\AssemblyInfo.cs" />    
+  <ItemGroup>
+    <Compile Include="AccountContext.cs" />
+    <Compile Include="BankComponent.cs" />
+    <Compile Include="CurrentAccountComponent.cs" />
+    <Compile Include="IAccountComponent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SavingAccountComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JDR.Generic.Data\JDR.Generic.Data.csproj">
       <Project>{5C668D8F-7766-40C3-9734-9F00C8F325A6}</Project>
       <Name>JDR.Generic.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JDR.Generic.Entities\JDR.Generic.Entities.csproj">
-      <Project>{0BBB7967-A5EC-4FC0-BE56-49111985A194}</Project>
-      <Name>JDR.Generic.Entities</Name>
+    <ProjectReference Include="..\JDR.Generic.Domain\JDR.Generic.Domain.csproj">
+      <Project>{E32A4379-C5A4-47E8-96E7-4FAC0335B201}</Project>
+      <Name>JDR.Generic.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

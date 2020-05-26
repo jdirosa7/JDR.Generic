@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JDR.Generic.Hosts.Web", "JD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JDR.Generic.UI.Web", "JDR.Generic.UI.Web\JDR.Generic.UI.Web.csproj", "{9727AF09-48C0-442E-8EB3-416821BBEDF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JDR.Generic.Domain", "JDR.Generic.Domain\JDR.Generic.Domain.csproj", "{E32A4379-C5A4-47E8-96E7-4FAC0335B201}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{9727AF09-48C0-442E-8EB3-416821BBEDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9727AF09-48C0-442E-8EB3-416821BBEDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9727AF09-48C0-442E-8EB3-416821BBEDF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E32A4379-C5A4-47E8-96E7-4FAC0335B201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E32A4379-C5A4-47E8-96E7-4FAC0335B201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E32A4379-C5A4-47E8-96E7-4FAC0335B201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E32A4379-C5A4-47E8-96E7-4FAC0335B201}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,9 +95,10 @@ Global
 		{0BBB7967-A5EC-4FC0-BE56-49111985A194} = {5B12DA28-4107-462D-9DE8-C0B852F7146F}
 		{7159857F-7980-473A-AEB1-365AF942B33B} = {22C2A7F9-5AAD-49AB-9A10-27E19046A23A}
 		{9727AF09-48C0-442E-8EB3-416821BBEDF5} = {A3A713E0-AA63-4ABF-8ABB-788EDF6A499C}
+		{E32A4379-C5A4-47E8-96E7-4FAC0335B201} = {5B12DA28-4107-462D-9DE8-C0B852F7146F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
 		SolutionGuid = {56358EFF-71A2-40FC-AED3-94965D1914E5}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal

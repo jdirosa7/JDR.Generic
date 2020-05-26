@@ -1,4 +1,5 @@
-﻿using JDR.Generic.Entities;
+﻿using JDR.Generic.Domain;
+using JDR.Generic.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,16 +8,9 @@ using System.Threading.Tasks;
 
 namespace JDR.Generic.Data
 {
-    public interface IRepository<TEntity> where TEntity : IEntity
+    public interface IAccountRepository
     {
-                
-        TEntity Create(TEntity entity);
-        List<TEntity> Read();
-        TEntity ReadBy(int id);
-        List<TEntity> ReadyByFilters(Dictionary<string, string> filters);
-        void Update(TEntity entity);
-        void Delete(int id);
-
-        
+        void Deposit(BankOperation operation);
+        void Extract(BankOperation operation);
     }
 }

@@ -55,11 +55,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AccountService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JDR.Generic.Business\JDR.Generic.Business.csproj">
       <Project>{C373C6D9-66A6-41F4-9F97-CA902B49C7FC}</Project>
       <Name>JDR.Generic.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JDR.Generic.Domain\JDR.Generic.Domain.csproj">
+      <Project>{E32A4379-C5A4-47E8-96E7-4FAC0335B201}</Project>
+      <Name>JDR.Generic.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\JDR.Generic.Entities\JDR.Generic.Entities.csproj">
       <Project>{0BBB7967-A5EC-4FC0-BE56-49111985A194}</Project>

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Bank Accounts";
+}
+
+<h2>Operaciones en UAI Bank</h2>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Voy a
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/BankAccount/Extract">Extraer</a>
+        <a class="dropdown-item" href="/BankAccount/Deposit">Depositar</a>
+        <a class="dropdown-item" href="/BankAccount/Transfer">Transferir</a>
+    </div>
+</div>
+
+
+@section Scripts{
+
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+}
