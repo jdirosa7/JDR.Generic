@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountComponent.cs" />
     <Compile Include="AccountContext.cs" />
     <Compile Include="BankComponent.cs" />
     <Compile Include="CurrentAccountComponent.cs" />
     <Compile Include="IAccountComponent.cs" />
+    <Compile Include="IBankComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavingAccountComponent.cs" />
   </ItemGroup>

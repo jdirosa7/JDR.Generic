@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -83,11 +84,11 @@
     </ProjectReference>
     <ProjectReference Include="..\JDR.Generic.Entities\JDR.Generic.Entities.csproj">
       <Project>{0BBB7967-A5EC-4FC0-BE56-49111985A194}</Project>
-      <Name>MCGA-Safari.Entities</Name>
+      <Name>JDR.Generic.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\JDR.Generic.Services.Contracts\JDR.Generic.Services.Contracts.csproj">
       <Project>{C7DA0A9A-0FA2-4535-AA76-3B8608B15190}</Project>
-      <Name>MCGA-Safari.Services.Contracts</Name>
+      <Name>JDR.Generic.Services.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

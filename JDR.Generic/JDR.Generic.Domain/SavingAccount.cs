@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace JDR.Generic.Domain
 {
-    public class SavingAccount : IAccount
+    public class SavingAccount : Account
     {        
-        public int AccountNumber { get; set; }
-        public float Balance { get; set; }
+        
     }
 }

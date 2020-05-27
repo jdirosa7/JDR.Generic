@@ -11,11 +11,12 @@ namespace JDR.Generic.Business
     public class CurrentAccountComponent : IAccountComponent
     {
         AccountDAC dac = new AccountDAC();
+        BankComponent bankModule = new BankComponent();
 
         public void Deposit(BankOperation operation)
         {
             dac.Deposit(operation);
-            //Crear movimiento
+            bankModule.SaveMovement(operation);
         }
 
         public void Extract(BankOperation operation)
@@ -23,15 +24,15 @@ namespace JDR.Generic.Business
             IAccount source = operation.SourceAccount;
 
             dac.Extract(operation);
-            //Crear movimiento
+            bankModule.SaveMovement(operation);
         }
 
         public void Transfer(BankOperation operation)
         {
             dac.Extract(operation);
-            dac.Deposit(operation);            
+            dac.Deposit(operation);
 
-            //Crear movimiento
+            bankModule.SaveMovement(operation);
         }
     }
 }

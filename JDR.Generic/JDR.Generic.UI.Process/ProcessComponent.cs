@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web;
 
@@ -74,7 +76,7 @@ namespace JDR.Generic.UI.Process
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(mediaType));
 
                 var response = client.GetAsync(host + pathAndQuery).Result;
-                response.EnsureSuccessStatusCode();
+                response.EnsureSuccessStatusCode();                
 
                 result = response.Content.ReadAsAsync<T>().Result;
             }

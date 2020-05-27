@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Bank Accounts";
+}
+
+<h2>Operaciones en UAI Bank</h2>
+
+
+<label>Voy a </label>
+<br />
+
+
+
+<input type="button" class="btn btn-primary" title="Extraer" value="Extraer" onclick="location.href='@Url.Action("Extract", "BankAccount")'" />
+<input type="button" class="btn btn-primary" title="Depositar" value="Depositar" onclick="location.href='@Url.Action("Deposit", "BankAccount")'" />
+<input type="button" class="btn btn-primary" title="Transferir" value="Transferir" onclick="location.href='@Url.Action("Transfer", "BankAccount")'" />
+
+
+

@@ -8,15 +8,23 @@ using JDR.Generic.Domain;
 
 namespace JDR.Generic.Business
 {
-    public class BankComponent
+    public class BankComponent : IBankComponent
     {
-        public List<IAccount> GetAccounts()
+        public List<Account> GetAccounts()
         {
             BankDAC dac = new BankDAC();
-            List<IAccount> result = default(List<IAccount>);
+            List<Account> result = default(List<Account>);
 
             result = dac.GetAllAccounts();
             return result;
+        }
+
+        public void SaveMovement(BankOperation operation)
+        {
+            BankDAC dac = new BankDAC();
+            MovementType movType = dac.GetMovementByName(operation.MovementType.Name);
+            operation.MovementType = movType;
+            dac.SaveMovement(operation);            
         }
     }
 }

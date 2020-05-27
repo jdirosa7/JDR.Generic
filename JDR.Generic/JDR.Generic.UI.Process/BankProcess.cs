@@ -12,7 +12,7 @@ namespace JDR.Generic.UI.Process
 {
     public class BankProcess : ProcessComponent
     {
-        public List<IAccount> GetAccounts()
+        public List<Account> GetAccounts()
         {
             var response = HttpGet<BankResponse>("api/bank/getAccounts", new Dictionary<string, object>(), MediaType.Json);
             return response.Accounts;

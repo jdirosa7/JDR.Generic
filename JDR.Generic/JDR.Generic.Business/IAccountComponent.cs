@@ -11,6 +11,6 @@ namespace JDR.Generic.Business
     {
         void Deposit(BankOperation operation);
         void Extract(BankOperation operation);
-        void Transfer(BankOperation operation);
+        void Transfer(BankOperation operation);        
     }
 }

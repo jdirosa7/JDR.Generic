@@ -1,0 +1,74 @@
+﻿@model JDR.Generic.Domain.BankOperation
+
+@{
+    ViewBag.Title = "Deposit";
+}
+
+<h2>Realizar depósito</h2>
+
+
+@*@using (Html.BeginForm("PostData", "Index", FormMethod.Post, new { @id = "formsubmit" }))
+{
+<div class="form-horizontal">
+    <h4 class="crudType"></h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="ValidationError hidden">
+        <strong>Debe completar todos los campos obligatorios</strong>
+    </div>
+    <br />
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SourceAccount, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-8">
+            @Html.EditorFor(model => model.SourceAccount, new { htmlAttributes = new { @class = "form-control", @id = "Name", @name = "Name", @placeholder = "Nombre" } })
+            @Html.ValidationMessageFor(model => model.SourceAccount, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TargetAccount, htmlAttributes: new { @class = "control-label col-md-4" })
+        <div class="col-md-8">
+            @Html.EditorFor(model => model.TargetAccount, new { htmlAttributes = new { @class = "form-control", @id = "LastName", @name = "LastName", @placeholder = "Apellido" } })
+            @Html.ValidationMessageFor(model => model.TargetAccount, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+</div>
+}*@
+
+
+
+
+<label>Saldo a depositar</label>
+<input type="text" class="form-control saldo" /><p class="accountName"></p>
+
+<br />
+<button type="button" class="btn btn-primary" onclick="deposit()">Depositar</button>
+
+<h1>Cuentas</h1>
+
+<table id="tableAccounts" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Id</th>
+            <th>Account Number</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+</table>
+
+<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/sl-1.3.1/datatables.min.css" />
+
+@section Scripts{
+
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui.js")"></script>
+    <script src="~/Scripts/bank.js"></script>
+}
+

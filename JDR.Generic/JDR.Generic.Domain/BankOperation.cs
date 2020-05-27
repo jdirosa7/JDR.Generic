@@ -8,8 +8,9 @@ namespace JDR.Generic.Domain
 {
     public class BankOperation
     {
-        public IAccount SourceAccount { get; set; }
-        public IAccount TargetAccount { get; set; }
-        public double Value { get; set; }
+        public Account SourceAccount { get; set; }
+        public Account TargetAccount { get; set; }
+        public decimal Value { get; set; }
+        public MovementType MovementType { get; set; }
     }
 }

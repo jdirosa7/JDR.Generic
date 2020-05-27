@@ -8,7 +8,8 @@ namespace JDR.Generic.Domain
 {
     public interface IAccount
     {
-        int AccountNumber { get; set; }
-        float Balance { get; set; }
+        int Id { get; set; }
+        string AccountNumber { get; set; }
+        decimal Balance { get; set; }
     }
 }

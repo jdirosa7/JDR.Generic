@@ -11,11 +11,12 @@ namespace JDR.Generic.Business
     public class SavingAccountComponent : IAccountComponent
     {
         AccountDAC dac = new AccountDAC();
+        BankComponent bankModule = new BankComponent();
 
         public void Deposit(BankOperation operation)
         {
             dac.Deposit(operation);
-            //Crear movimiento
+            bankModule.SaveMovement(operation);
         }
 
         public void Extract(BankOperation operation)
@@ -25,7 +26,7 @@ namespace JDR.Generic.Business
             if(source.Balance >= operation.Value)
             {
                 dac.Extract(operation);
-                //Crear movimiento
+                bankModule.SaveMovement(operation);
             }
         }
 
@@ -36,9 +37,9 @@ namespace JDR.Generic.Business
             if (source.Balance >= operation.Value)
             {
                 dac.Extract(operation);
-                dac.Deposit(operation);                
+                dac.Deposit(operation);
 
-                //Crear movimiento
+                bankModule.SaveMovement(operation);
             }            
         }
     }

@@ -12,6 +12,6 @@ namespace JDR.Generic.Services.Contracts.Response
     public class BankResponse
     {
         [DataMember]
-        public List<IAccount> Accounts { get; set; }
+        public List<Account> Accounts { get; set; }
     }
 }

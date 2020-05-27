@@ -20,7 +20,7 @@ namespace JDR.Generic.Data
             var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
             using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
             {
-                db.AddInParameter(cmd, "@Balance", DbType.AnsiString, operation.TargetAccount.Balance + operation.Value);                
+                db.AddInParameter(cmd, "@Balance", DbType.Decimal, operation.TargetAccount.Balance + operation.Value);                
                 db.AddInParameter(cmd, "@ID", DbType.Int32, operation.TargetAccount);
                 db.ExecuteNonQuery(cmd);
             }
@@ -33,7 +33,7 @@ namespace JDR.Generic.Data
             var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
             using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
             {
-                db.AddInParameter(cmd, "@Balance", DbType.AnsiString, operation.SourceAccount.Balance - operation.Value);
+                db.AddInParameter(cmd, "@Balance", DbType.Decimal, operation.SourceAccount.Balance - operation.Value);
                 db.AddInParameter(cmd, "@ID", DbType.Int32, operation.SourceAccount);
                 db.ExecuteNonQuery(cmd);
             }

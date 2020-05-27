@@ -9,6 +9,7 @@ namespace JDR.Generic.Data
 {
     public interface IBankRepository
     {
-        List<IAccount> GetAllAccounts();
+        List<Account> GetAllAccounts();
+        void SaveMovement(BankOperation operation);
     }
 }

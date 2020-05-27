@@ -31,8 +31,6 @@ namespace JDR.Generic.Services.Http
                     context = new AccountContext(new CurrentAccountComponent());
 
                 var response = new DepositResponse();
-                //var bc = new SavingAccountComponent();
-                //bc.Deposit(request.Operation);
 
                 context.Deposit(request.Operation);
 
@@ -55,9 +53,18 @@ namespace JDR.Generic.Services.Http
         {
             try
             {
+                var req = request.Operation.TargetAccount.GetType().Name;
+
+                AccountContext context;
+
+                if (req == "SavingAccount")
+                    context = new AccountContext(new SavingAccountComponent());
+                else
+                    context = new AccountContext(new CurrentAccountComponent());
+
                 var response = new ExtractResponse();
-                var bc = new SavingAccountComponent();
-                bc.Extract(request.Operation);
+                context.Extract(request.Operation);
+
                 return response;
             }
             catch (Exception ex)
@@ -77,9 +84,19 @@ namespace JDR.Generic.Services.Http
         {
             try
             {
+                var req = request.Operation.TargetAccount.GetType().Name;
+
+                AccountContext context;
+
+                if (req == "SavingAccount")
+                    context = new AccountContext(new SavingAccountComponent());
+                else
+                    context = new AccountContext(new CurrentAccountComponent());
+
                 var response = new TransferResponse();
-                var bc = new SavingAccountComponent();
-                bc.Transfer(request.Operation);
+
+                context.Transfer(request.Operation);
+
                 return response;
             }
             catch (Exception ex)
